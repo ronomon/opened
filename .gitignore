@@ -1,0 +1,6 @@
+.DS_Store
+.jshintrc
+build
+node_modules
+utimes_fixtures
+binding.node

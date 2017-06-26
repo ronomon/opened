@@ -1,0 +1,34 @@
+{
+  "name": "@ronomon/opened",
+  "version": "1.0.0",
+  "description": "Check if a file is open in another application on Windows, macOS and Linux.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronomon/opened.git"
+  },
+  "keywords": [
+    "exclusive",
+    "fd",
+    "file",
+    "fuser",
+    "lsof",
+    "open",
+    "opened"
+  ],
+  "author": "Joran Dirk Greef",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ronomon/opened/issues"
+  },
+  "homepage": "https://github.com/ronomon/opened#readme",
+  "scripts": {
+    "install": "node-gyp rebuild",
+    "postinstall": "node-gyp clean",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "@ronomon/queue": "^2.1.0",
+    "nan": "^2.6.2"
+  }
+}
