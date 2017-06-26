@@ -22,3 +22,8 @@ Opened.files(paths,
   }
 );
 ```
+
+## Tests
+```
+node test.js
+```
