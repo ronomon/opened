@@ -47,7 +47,7 @@ ALPHABET += 'abcdefghijklmnopqrstuvwxyz';
 ALPHABET += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 ALPHABET += '0123456789';
 ALPHABET += 'àáâäæãåāèéêëēėę';
-ALPHABET += '\b\f\t\n\r   ';
+ALPHABET += '               ';
 
 function close(fds) {
   fds.forEach(
