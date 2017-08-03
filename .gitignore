@@ -1,6 +1,5 @@
 .DS_Store
-.jshintrc
+binding.node
 build
 node_modules
 opened_fixtures
-binding.node
