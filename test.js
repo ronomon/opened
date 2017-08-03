@@ -47,7 +47,11 @@ ALPHABET += 'abcdefghijklmnopqrstuvwxyz';
 ALPHABET += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 ALPHABET += '0123456789';
 ALPHABET += 'àáâäæãåāèéêëēėę';
-ALPHABET += '               ';
+if (Node.process.platform === 'win32') {
+  ALPHABET += '   ';
+} else {
+  ALPHABET += '\b\f\t\n\r   ';
+}
 
 function close(fds) {
   fds.forEach(
