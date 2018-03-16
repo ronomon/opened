@@ -67,7 +67,7 @@ Unix.file = function(path, end) {
   self.files([path],
     function(error, files) {
       if (error) return end(error);
-      end(undefined, files.hasOwnProperty(path));
+      end(undefined, files[path]);
     }
   );
 };
