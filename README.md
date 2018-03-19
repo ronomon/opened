@@ -22,7 +22,7 @@ Opened.files(paths,
     if (error) throw error;
     paths.forEach(
       function(path) {
-        console.log(path + ' open=' + hashTable.hasOwnProperty(path));
+        console.log(path + ' open=' + hashTable[path]);
       }
     );
   }
