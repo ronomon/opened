@@ -12,8 +12,14 @@ npm install @ronomon/opened
 ## Unix
 `Opened` uses `lsof` on macOS and on Linux. On Linux (but not on macOS), `lsof` requires sudo permissions to iterate across open file descriptors for the user, otherwise no files will be detected as open and no permissions error will be returned.
 
-## Usage
+## API
+`Opened.file()`
+Return a Boolean: `true` if the file is open, else `false`.
 
+`Opened.files()`
+Return an Object like `{ 'path_1': true, 'path_2': false, ... }`.
+
+## Usage
 ```javascript
 var Opened = require('@ronomon/opened');
 var paths = [...];
