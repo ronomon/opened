@@ -1,6 +1,6 @@
 {
   "name": "@ronomon/opened",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "Check if a file is open in another application on Windows, macOS and Linux.",
   "main": "index.js",
   "repository": {
