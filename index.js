@@ -79,17 +79,13 @@ Unix.files = function(paths, end) {
   var files = {};
   var queue = new Queue(1); // Concurrency yields no improvement with lsof.
   queue.onData = function(paths, end) {
-    var escapedPaths = paths.map(
-      function(path) {
-        return '"' + path.replace(/"/g, '\\"') + '"';
-      }
-    );
-    var command = 'lsof -F n -- ' + escapedPaths.join(' ');
+    var command = 'lsof';
+    var args = ['-F', 'n', '--'].concat(paths);
     var options = {
       encoding: 'utf-8',
       maxBuffer: 2 * 1024 * 1024
     };
-    Node.child.exec(command, options,
+    Node.child.execFile(command, args, options,
       function(error, stdout, stderr) {
         // lsof returns an error and a status code of 1 if a file is not open:
         if (error && error.code === 1 && stderr.length === 0) error = undefined;
